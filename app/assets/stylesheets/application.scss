@@ -20,7 +20,7 @@
  @import "font-awesome";
 
  .custab{
-   border: 1px solid #ccc;
+   border: 10px solid #ccc;
    padding: 5px;
    margin: 5% 0;
    box-shadow: 3px 3px 2px #ccc;
@@ -33,10 +33,12 @@
  }
 
  .jumbotron {
-   background-image:url('http://y.photo.qq.com/img?s=n0m7YMg0L&l=y.jpg');
+   background-image:url('http://a2.qpic.cn/psb?/V12SVAQa01AlH1/f*rwhDvR7FKmxDTgqf6qf6bXBLvPO8.AuIhBiSTchL0!/b/dHgBAAAAAAAA&bo=AASrAgAEqwIFCSo!&rf=viewer_4');
    background-repeat: no-repeat;
    background-size: cover;
-   padding-bottom: 110px;
+   padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
+   margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+   border-radius: 0;//圆角为0
  }
 
  .title {
@@ -70,4 +72,22 @@
     border: 0 none;
     box-shadow: none;
     margin-top: 60px;
+}
+
+.navbar-default {
+    background-color: #F5F5F5;//背景颜色
+    border-color: #F5F5F5;//边框色
+    margin-bottom: 0;//底部 margin 不撑开距离
+}
+
+ @media (min-width: 768px) {
+     .navbar {
+         border-radius: 0;//圆角为0
+     }
+ }
+
+.navbar-default  .navbar-brand {
+   color: #EF6C00;//字体颜色
+   padding: 10px 15px;//上下10px,左右15px
+   line-height: 30px;//文字行高
 }
